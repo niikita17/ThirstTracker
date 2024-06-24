@@ -1,0 +1,149 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hii</h1>
+    <a href="/index">click</a>
+
+
+    <p>
+        Summary:
+        <br>
+        <br>The machine learning model is designed to assess whether an individual needs 
+        to drink water by analyzing various inputs. These inputs include environmental factors like temperature, 
+        physical activities such as exertion and exercise,and potentially other relevant metrics. 
+         By processing these inputs, the model provides a recommendation on 
+         whether water intake is necessary, helping users stay hydrated and maintain optimal health.
+    </p>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThirstTracker</title>
+        {% load static %}
+
+</head>
+<style>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #33879a;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.justified-text {
+    text-align: justify;
+}
+.image-section, .summary-section {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+}
+
+.image-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary-section h2 {
+    margin-top: 0;
+}
+
+.summary-section ul {
+    padding-left: 20px;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.center-button {
+    padding: 10px 20px;
+    background-color: #288699;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 60px;
+    transition: background-color 0.3s;
+}
+
+.center-button:hover {
+    background-color: #1a587b;
+}
+</style>
+<body>
+    <header>
+        <h1>The Importance of Water</h1>
+    </header>
+    <div class="container">
+        <section class="image-section">
+            <img src="{% static 'download.jpg' %}" alt="Water Image">
+        </section>
+        <section class="summary-section">
+            <h2>ThirstTracker</h2>
+             <p  class="justified-text">
+        Summary:<br>
+        <br>
+         ThirstTracker is the machine learning model is designed to assess whether an individual needs 
+        to drink water by analyzing various inputs. These inputs include environmental factors like temperature, 
+        physical activities such as exertion and exercise,and potentially other relevant metrics. 
+         By processing these inputs, the model provides a recommendation on 
+         whether water intake is necessary, helping users stay hydrated and maintain optimal health.
+    </p>
+        </section>
+             <div class="button-container">
+            <a href="{% url 'index' %}" class="center-button">Next</a>
+        </div>
+    </div>
+</body>
+</html>

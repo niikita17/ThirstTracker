@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict the model</title>
+    <!-- Load the static template tag library -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<style>
+  /* Add this to your existing styles.css file */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c5c1c1;
+}
+
+header {
+    background-color: #3a8db0;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h2 {
+    margin: 0;
+    font-size: 2em;
+}
+.container{
+  margin-left:28%;
+}
+.form-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    max-width: 600px;
+    width: 100%;
+    background-color: bisque;
+}
+
+.form-section h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.center-button {
+    padding: 10px 20px;
+    background-color: #3685af;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.center-button:hover {
+    background-color: #3a8db0;
+}
+</style>
+<body>
+    <header>
+      <br>
+                  <center> <h2 >Water Notifier</h2></center>
+
+    </header>
+    <div class="container">
+        <section class="form-section">
+            <form action="/result" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Tempreature:</label>
+                    <input type="number" id="temp" name="temp" required>
+                </div>
+                 <div class="form-group">
+                <label for="name">Humidity:</label>
+                    <input type="number" id="humidity" name="humidity" required>
+                </div>  <div class="form-group">
+                <label for="name">Exerstion:</label>
+                    <input type="number" id="exe" name="exe" required>
+                </div>  <div class="form-group">
+                <label for="name">Setp Count:</label>
+                    <input type="number" id="step" name="step" required>
+                </div>
+                <div class="button-container">
+                    <button type="submit" class="center-button">Submit</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
